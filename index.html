@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Music Recommender</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-fetch("data/music.json")
-  .then(res => res.json())
-  .then(data => {
-    console.log("JSON Loaded:", data);
-  });
-</script>
-
 </head>
-  
 <body>
 
 <nav>
@@ -30,8 +22,6 @@ fetch("data/music.json")
 </div>
 
 <div class="container" id="songs"></div>
-
-<footer>© 2026 Music Recommendation Site</footer>
 
 <script src="script.js"></script>
 </body>
