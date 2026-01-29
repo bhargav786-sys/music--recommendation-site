@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Artists</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,25 +12,28 @@
   <a href="moods.html">Moods</a>
   <a href="genres.html">Genres</a>
   <a href="artists.html">Artists</a>
-  <a href="about.html">About</a>
 </nav>
 
-<h1>🌟 Featured Artists</h1>
+<h1>Featured Artists 🌟</h1>
 
-<div class="card">
-  <h3>Taylor Swift</h3>
-  <p>Genre: Pop</p>
-</div>
+<div class="container" id="artistContainer"></div>
 
-<div class="card">
-  <h3>Drake</h3>
-  <p>Genre: Hip-Hop</p>
-</div>
-
-<div class="card">
-  <h3>The Weeknd</h3>
-  <p>Genre: R&B / Pop</p>
-</div>
+<script>
+fetch("data/music.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("artistContainer");
+    data.artists.forEach(artist => {
+      container.innerHTML += `
+        <div class="card">
+          <h3>${artist.name}</h3>
+          <p>Genre: ${artist.genre}</p>
+          <p>Songs: ${artist.popularSongs.join(", ")}</p>
+        </div>
+      `;
+    });
+  });
+</script>
 
 </body>
 </html>
