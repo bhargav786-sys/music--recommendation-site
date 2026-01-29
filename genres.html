@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Genres</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,25 +12,29 @@
   <a href="moods.html">Moods</a>
   <a href="genres.html">Genres</a>
   <a href="artists.html">Artists</a>
-  <a href="about.html">About</a>
 </nav>
 
-<h1>🎼 Music Genres</h1>
+<h1>Music Genres 🎼</h1>
 
-<div class="card">
-  <h3>🎤 Pop</h3>
-  <p>Taylor Swift, Dua Lipa, Ariana Grande</p>
-</div>
+<div class="container" id="genreContainer"></div>
 
-<div class="card">
-  <h3>🎸 Rock</h3>
-  <p>Imagine Dragons, Coldplay, Linkin Park</p>
-</div>
+<script>
+fetch("data/music.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("genreContainer");
+    const genres = data.genres;
 
-<div class="card">
-  <h3>🎧 Hip-Hop</h3>
-  <p>Drake, Kendrick Lamar, Travis Scott</p>
-</div>
+    for (let genre in genres) {
+      let html = `<div class="card"><h3>${genre.toUpperCase()}</h3>`;
+      genres[genre].forEach(artist => {
+        html += `<p>${artist}</p>`;
+      });
+      html += `</div>`;
+      container.innerHTML += html;
+    }
+  });
+</script>
 
 </body>
 </html>
