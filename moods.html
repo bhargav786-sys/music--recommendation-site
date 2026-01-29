@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Mood Music</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,16 +12,29 @@
   <a href="moods.html">Moods</a>
   <a href="genres.html">Genres</a>
   <a href="artists.html">Artists</a>
-  <a href="about.html">About</a>
 </nav>
 
-<h1>Mood Based Music</h1>
-<div class="container">
-  <div class="card"><h3>😊 Happy</h3><p>Upbeat & positive vibes</p></div>
-  <div class="card"><h3>😢 Sad</h3><p>Emotional & slow tracks</p></div>
-  <div class="card"><h3>😌 Chill</h3><p>Relax & focus</p></div>
-</div>
+<h1>Mood Based Music 🎭</h1>
 
+<div class="container" id="moodContainer"></div>
+
+<script>
+fetch("data/music.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("moodContainer");
+    const moods = data.moods;
+
+    for (let mood in moods) {
+      let html = `<div class="card"><h3>${mood.toUpperCase()}</h3>`;
+      moods[mood].forEach(song => {
+        html += `<p>${song.title} – ${song.artist}</p>`;
+      });
+      html += `</div>`;
+      container.innerHTML += html;
+    }
+  });
+</script>
 
 </body>
 </html>
