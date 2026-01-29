@@ -3,7 +3,16 @@
 <head>
   <title>Music Recommender</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+fetch("data/music.json")
+  .then(res => res.json())
+  .then(data => {
+    console.log("JSON Loaded:", data);
+  });
+</script>
+
 </head>
+  
 <body>
 
 <nav>
