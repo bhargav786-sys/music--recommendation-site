@@ -1,32 +1,124 @@
 {
-  "songs": [
+  "trending": [
     {
-      "title": "Happy",
-      "artist": "Pharrell Williams",
-      "mood": "happy",
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
       "genre": "pop",
-      "spotify": "https://open.spotify.com/search/Happy%20Pharrell"
+      "spotify": "https://open.spotify.com/search/Blinding%20Lights"
     },
     {
-      "title": "Someone Like You",
-      "artist": "Adele",
-      "mood": "sad",
+      "title": "Levitating",
+      "artist": "Dua Lipa",
       "genre": "pop",
-      "spotify": "https://open.spotify.com/search/Someone%20Like%20You%20Adele"
+      "spotify": "https://open.spotify.com/search/Levitating%20Dua%20Lipa"
     },
     {
-      "title": "Believer",
-      "artist": "Imagine Dragons",
-      "mood": "energetic",
-      "genre": "rock",
-      "spotify": "https://open.spotify.com/search/Believer%20Imagine%20Dragons"
+      "title": "Circles",
+      "artist": "Post Malone",
+      "genre": "pop",
+      "spotify": "https://open.spotify.com/search/Circles%20Post%20Malone"
+    }
+  ],
+
+  "moods": {
+    "happy": [
+      {
+        "title": "Happy",
+        "artist": "Pharrell Williams",
+        "spotify": "https://open.spotify.com/search/Happy%20Pharrell"
+      },
+      {
+        "title": "Can't Stop the Feeling",
+        "artist": "Justin Timberlake",
+        "spotify": "https://open.spotify.com/search/Cant%20Stop%20the%20Feeling"
+      }
+    ],
+    "sad": [
+      {
+        "title": "Someone Like You",
+        "artist": "Adele",
+        "spotify": "https://open.spotify.com/search/Someone%20Like%20You%20Adele"
+      },
+      {
+        "title": "Ocean Eyes",
+        "artist": "Billie Eilish",
+        "spotify": "https://open.spotify.com/search/Ocean%20Eyes%20Billie%20Eilish"
+      }
+    ],
+    "chill": [
+      {
+        "title": "Slow Dancing in the Dark",
+        "artist": "Joji",
+        "spotify": "https://open.spotify.com/search/Slow%20Dancing%20in%20the%20Dark"
+      },
+      {
+        "title": "Lo-Fi Beats",
+        "artist": "Various Artists",
+        "spotify": "https://open.spotify.com/search/lofi"
+      }
+    ],
+    "energetic": [
+      {
+        "title": "Believer",
+        "artist": "Imagine Dragons",
+        "spotify": "https://open.spotify.com/search/Believer%20Imagine%20Dragons"
+      },
+      {
+        "title": "Till I Collapse",
+        "artist": "Eminem",
+        "spotify": "https://open.spotify.com/search/Till%20I%20Collapse"
+      }
+    ]
+  },
+
+  "genres": {
+    "pop": [
+      "Taylor Swift",
+      "Dua Lipa",
+      "Ariana Grande"
+    ],
+    "rock": [
+      "Coldplay",
+      "Linkin Park",
+      "Imagine Dragons"
+    ],
+    "hiphop": [
+      "Drake",
+      "Kendrick Lamar",
+      "Travis Scott"
+    ],
+    "jazz": [
+      "Miles Davis",
+      "Louis Armstrong",
+      "John Coltrane"
+    ],
+    "indie": [
+      "Arctic Monkeys",
+      "Tame Impala",
+      "Lana Del Rey"
+    ]
+  },
+
+  "artists": [
+    {
+      "name": "Taylor Swift",
+      "genre": "Pop",
+      "popularSongs": ["Love Story", "Blank Space"]
     },
     {
-      "title": "Lofi Beats",
-      "artist": "Various Artists",
-      "mood": "chill",
-      "genre": "lofi",
-      "spotify": "https://open.spotify.com/search/lofi"
+      "name": "Drake",
+      "genre": "Hip-Hop",
+      "popularSongs": ["God's Plan", "One Dance"]
+    },
+    {
+      "name": "The Weeknd",
+      "genre": "R&B / Pop",
+      "popularSongs": ["Blinding Lights", "Starboy"]
+    },
+    {
+      "name": "Arijit Singh",
+      "genre": "Indian Pop",
+      "popularSongs": ["Kesariya", "Tum Hi Ho"]
     }
   ]
 }
