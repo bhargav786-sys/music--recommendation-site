@@ -3,14 +3,12 @@ let allSongs = [];
 fetch("data/music.json")
   .then(res => res.json())
   .then(data => {
-    allSongs = data.songs;
+    allSongs = data.trending;
     displaySongs(allSongs);
   });
 
 function displaySongs(songs) {
   const container = document.getElementById("songs");
-  if (!container) return;
-
   container.innerHTML = "";
 
   songs.forEach(song => {
@@ -18,9 +16,7 @@ function displaySongs(songs) {
       <div class="card">
         <h3>${song.title}</h3>
         <p>${song.artist}</p>
-        <p>Mood: ${song.mood}</p>
-        <p>Genre: ${song.genre}</p>
-        <a href="${song.spotify}" target="_blank">🎧 Open in Spotify</a>
+        <a href="${song.spotify}" target="_blank">🎧 Spotify</a>
       </div>
     `;
   });
